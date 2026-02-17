@@ -13,7 +13,7 @@ services:
       - PORT=3000
       - USER_AGENT=ipscmatch-scanner/1.0 (+portainer)
     volumes:
-      - /volume2/docker/matchkalender/data:/app/data
+      - data:/app/data
     restart: unless-stopped
 
 volumes:

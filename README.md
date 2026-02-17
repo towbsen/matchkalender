@@ -77,8 +77,6 @@ Hinweis: Die optimierte Multi‑Stage `Dockerfile` ist jetzt im Repo (`Dockerfil
 
 Empfohlene Umgebungvariablen (docker-compose / Container):
 
-Wenn du willst, erstelle ich ein `systemd` Service‑File, ein Multi‑stage Dockerfile (kleineres Image), oder ein GitHub Actions Workflow, das auf deine Synology per SSH/SFTP deployed. Welche Option bevorzugst du?
-
 ### Portainer Stack
 
 Du kannst die App als Stack in Portainer deployen. Datei `portainer-stack.yml` ist im Repo hinzugefügt.
