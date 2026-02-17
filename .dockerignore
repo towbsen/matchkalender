@@ -1,0 +1,15 @@
+node_modules
+dist
+data
+.env
+.DS_Store
+npm-debug.log
+test
+coverage
+.git
+node_modules
+dist
+.git
+.env
+data/matches.json
+npm-debug.log

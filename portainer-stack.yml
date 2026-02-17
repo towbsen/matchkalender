@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  matchkalender:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: matchkalender:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - USER_AGENT=ipscmatch-scanner/1.0 (+portainer)
+    volumes:
+      - /volume2/docker/matchkalender/data:/app/data
+    restart: unless-stopped
+
+volumes:
+  data:

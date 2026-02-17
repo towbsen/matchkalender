@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  matchkalender:
+    build: .
+    image: matchkalender:latest
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - USER_AGENT=ipscmatch-scanner/1.0 (+docker)
+    volumes:
+      - ./data:/app/data
+    restart: always

@@ -1,0 +1,133 @@
+:root {
+  color-scheme: light;
+  --bg: #f4f5f6;
+  --panel: #ffffff;
+  --fg: #16212b;
+  --muted: #5d6b78;
+  --accent: #1461a8;
+  --border: #d4dce4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--fg);
+  background: linear-gradient(180deg, #edf2f7 0%, #f8fafc 55%, #ffffff 100%);
+}
+
+.container {
+  max-width: 980px;
+  margin: 2rem auto;
+  padding: 1.25rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+.subtitle {
+  margin-top: 0.4rem;
+  color: var(--muted);
+}
+
+.controls {
+  margin-top: 1.2rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 0.7rem;
+  margin-bottom: 0.7rem;
+  align-items: center;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: 0.55rem 0.65rem;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: 1px solid var(--accent);
+  cursor: pointer;
+}
+
+button.secondary {
+  background: white;
+  color: var(--accent);
+}
+
+.meta {
+  margin: 1rem 0;
+  color: var(--muted);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 0.7rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.auslastung-green { color: #0b7a3e; font-weight: 600; }
+.auslastung-yellow { color: #a66e00; font-weight: 600; }
+.auslastung-red { color: #b22; font-weight: 700; }
+.auslastung-new { color: #0b5bd6; font-weight: 700; }
+.auslastung-muted { color: var(--muted); }
+
+td a.match-link { color: var(--accent); text-decoration: none; }
+td a.match-link:hover { text-decoration: underline; }
+
+td a.match-link .ext-icon {
+  margin-left: 6px;
+  font-size: 0.9em;
+  vertical-align: middle;
+  opacity: 0.85;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 760px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    margin: 1rem auto;
+    padding: 0.75rem;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+}

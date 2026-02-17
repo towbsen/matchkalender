@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPSC Match Scanner</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>IPSC Match Scanner</h1>
+      <p class="subtitle">Stündlicher Kalender-Scan mit Filter und Sortierung</p>
+
+      <section class="controls">
+        <div class="row">
+          <label for="levels">Level (mehrfach, Komma getrennt):</label>
+          <input id="levels" type="text" placeholder="z. B. 2,3,4" />
+        </div>
+
+        <div class="row">
+          <label for="origin">PLZ oder Ort für Entfernung (PLZ bevorzugt):</label>
+          <input id="origin" type="text" placeholder="z. B. 80331 oder München" />
+        </div>
+
+        <div class="row">
+          <label for="sort">Sortierung:</label>
+          <select id="sort">
+            <option value="date">Datum</option>
+            <option value="distance">Entfernung</option>
+          </select>
+        </div>
+
+        <div class="buttons">
+          <button id="loadBtn">Treffer laden</button>
+          <button id="scanBtn" class="secondary">Jetzt scannen</button>
+        </div>
+      </section>
+
+      <section class="meta" id="meta"></section>
+
+      <section>
+        <table id="resultTable">
+          <thead>
+            <tr>
+              <th>Disziplin</th>
+              <th>Lv.</th>
+              <th>Veranstaltung</th>
+              <th>Ort</th>
+              <th>Datum</th>
+              <th>Auslastung</th>
+              <th>Entfernung (km)</th>
+            </tr>
+          </thead>
+          <tbody id="resultBody"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
